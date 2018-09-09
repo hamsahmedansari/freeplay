@@ -1,0 +1,245 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FreePlay.master.cs" Inherits="FreePlay.FreePlay" %>
+<!-- 
+    ------- Author's ------
+
+    --- Hams Ahmed Ansari ---
+    ----- Email : Hams.Ahmed.Ansari95@gmail.com -------
+    ----- Website : https://hams.cf ------
+
+    --- Mumtaz Ahmed Siddiui ---
+    ----- Email : mumtaz.sid995@gmail.com -------
+    ----- Website : http://mumtazsiddiqui.cf ------
+
+    --- Murtaz Ali ---
+    ----- Email : ali7murtaza@gmail.com -------
+    ----- Website : http://murtazaali.ga ------
+    
+-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="Images/FreePlay.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- css -->
+
+    <!-- cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link href="dist/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="dist/css/main.css" rel="stylesheet" />
+
+    <!-- js -->
+    <script src="dist/js/jquery-slim.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+    <script src="dist/js/popper.min.js"></script>
+
+    <script src="dist/js/main.js"></script>
+    <!-- slider -->
+
+    <script src="dist/js/slider.js"></script>
+    <link rel="stylesheet" href="dist/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="dist/css/owl.theme.default.min.css" />
+    <script src="dist/js/owl.carousel.min.js"></script>
+    <!-- end slider -->
+
+    <%-- Google  --%>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112398285-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-112398285-4');
+        </script>
+
+    <%-- Google --%>
+
+    <!-- video plugin -->
+    <link rel='stylesheet prefetch' href='https://cdn.plyr.io/2.0.7/plyr.css' />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- nav -->
+        <!-- Start -->
+        <div class="" style="background: #000 !important;">
+            <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+                <a href="Default.aspx" class="navbar-brand  custom-logo-for-navbar mr-auto text-right " style="width: 20% !important;">
+                    <img src="img/logo.png" class="img img-fluid" style="width: 140px; min-width: 130px;" alt="Alternate Text" /></a>
+                <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#collapsingNavbar3" style="margin-top: 66px;">
+                    <span class="fa fa-navicon" style="font-size: 30px; padding: 10px;"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="collapsingNavbar3" style="margin-left: 30px;">
+                    <ul class="navbar-nav mx-auto w-100 nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx">Home</a>
+                        </li>
+                        <li class="nav-item dropdown ml-lg-3 ml-md-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Movies
+                            </a>
+                            <div class="dropdown-menu custom-dropdown-for-nav " style="background-color: #000 !important;">
+                                <hr class="d-none d-lg-none d-sm-block d-xs-block" />
+                                <a class="dropdown-item" href="Hollywood.aspx">Hollywood</a>
+                                <a class="dropdown-item" href="Bollywood.aspx">Bollywood</a>
+                                <a class="dropdown-item" href="Animated.aspx">Animated</a>
+                                <a class="dropdown-item" href="OtherMovies.aspx">Dubbed</a>
+                                <hr class="d-none d-lg-none d-sm-block d-xs-block">
+                            </div>
+                        </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="Cartoons.aspx">Cartoons</a>
+                        </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="Dramas.aspx">Dramas</a>
+                        </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="Songs.aspx">Songs</a>
+                        </li>
+                         <li class="nav-item dropdown ml-lg-3 ml-md-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Games
+                                    </a>
+                                    <div class="dropdown-menu custom-dropdown-for-nav ">
+                                        <hr class="d-none d-lg-none d-sm-block d-xs-block" />
+                                        <a class="dropdown-item" href="OnlineGame.aspx">Online Games</a>
+                                        <a class="dropdown-item" href="Game.aspx">Games</a>
+                                        <hr class="d-none d-lg-none d-sm-block d-xs-block" />
+                                    </div>
+                                </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="https://bolodunya.com/" target="_blank">Articles</a>
+                        </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="Request.aspx">Request</a>
+                        </li>
+                        <li class="nav-item ml-lg-3 ml-md-1">
+                            <a class="nav-link" href="ContactUs.aspx">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:Panel runat="server" ID="pnlBottomSlider">
+            <div class="container-fluid">
+                <div class="row" id="TopSlider">
+                    <div class="col-xl-1 col-lg-1 col-md-1 d-none d-lg-block text-center order-md-1 ">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 com-md-8 col-sm-12 col-xs-12  order-md-2 order-5 ">
+                        <div class="container" >
+                            <!-- Top Slider -->
+                            <asp:Panel runat="server" ID="pnlTopSlider" Visible="true" >
+                                <div class="col-xl-12  mt-2 " style="padding: 15px; border: 1px solid #ccc;">
+                                    <div style="height: 50px; width: 100%;">
+                                        <div class="float-left" style="font-size: 26px; line-height: 2;">
+                                            Latest Posts
+                                        </div>
+                                        <div class="float-right">
+                                            <span class="btn custom_arrow fa fa-angle-left  slider_custom_left_arrow"></span>
+                                            <span class="btn  custom_arrow  fa fa-pause  center_silder_play_pause"></span>
+                                            <span class="btn custom_arrow fa fa-angle-right  slider_custom_right_arrow"></span>
+                                        </div>
+                                    </div>
+                                    <asp:ListView runat="server"
+                                        ID="lvSliderGames"
+                                        GroupItemCount="1">
+                                        <LayoutTemplate>
+                                            <div class="owl-carousel slider-for-post" runat="server">
+                                                <div runat="server" class="items" id="groupPlaceholder">
+                                                </div>
+                                            </div>
+                                        </LayoutTemplate>
+                                        <GroupTemplate>
+                                            <div runat="server" id="productRow">
+                                                <span runat="server" id="itemPlaceholder"></span>
+                                            </div>
+                                        </GroupTemplate>
+                                        <ItemTemplate>
+                                            <a href='<%#  Eval("Qs") %>' rel="bookmark">
+                                                <div class="custom_trasition mt-3" style="">
+                                                    <div class="p-3 position-relative" style="cursor: pointer">
+                                                        <div class="position-relative " style="overflow: hidden;">
+                                                            <div class="shine"></div>
+                                                            <asp:Image runat="server" ImageUrl='<%#  Eval("Images") %>' class="img img-fluid custom-img-hover-for-index img-custom-for-slider" alt="Alternate Text" />
+                                                        </div>
+                                                        <p class="custom-movie-tittle-for-index-p text-dark"><%# Eval("Name") %></p>
+                                                        <div class="content_smvalue">
+                                                            <span class="smvalue ddata-value text-secondary"><span class="date"><%# Eval("dte", "{0:dd-MM-yyyy}") %></span></span>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </ItemTemplate>
+                                    </asp:ListView>
+                                </div>
+                            </asp:Panel>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </asp:Panel>
+        <!-- Footer -->
+        <!-- Start -->
+        <footer id="myFooter" style="margin-top: 10px;" class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="logo"><a href="#">
+                            <img src="img/logo.png" class="img img-fluid" style="width: 160px;" alt="Alternate Text" />
+                        </a></h2>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Movies</h5>
+                        <ul>
+                            <li><a href="Bollywood.aspx">Bollywood</a></li>
+                            <li><a href="Hollywood.aspx">Hollywood</a></li>
+                            <li><a href="OtherMovies.aspx">Dubbed</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>Other</h5>
+                        <ul>
+                            <li><a href="Game.aspx">Games</a></li>
+                            <li><a href="Songs.aspx">Songs</a></li>
+                            <li><a href="Dramas.aspx">Dramas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                        <h5>About us</h5>
+                        <ul>
+                            <li><a href="ContactUs.aspx">Contact us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="social-networks">
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="google"><i class="fa fa-youtube"></i></a>
+                            <a href="#" class="google"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        <asp:Button runat="server" ID="btnContactUs" Text="Contact us" class="btn btn-default" OnClick="btnContactUs_Click"></asp:Button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright" style="background-color: #17191b;">
+                <p>© 2018 Copyright <a href="Default.aspx">Freeplay.pk</a> </p>
+            </div>
+        </footer>
+        <!-- End -->
+    </form>
+</body>
+</html>

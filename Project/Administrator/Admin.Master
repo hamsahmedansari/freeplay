@@ -1,0 +1,100 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="FreePlay.Administrator.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Administrator</title>
+    <link href="../Content/bootstrap/css/Mumtazbootstrap.css" rel="stylesheet" />
+    <script src="../Content/jquery/jquery.min.js"></script>
+    <script src="../Content/popper/popper.min.js"></script>
+    <script src="../Content/bootstrap/js/bootstrap.min.js"></script>
+    <link href="../Content/socialmicons/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
+    <link rel="icon" href="../Images/FreePlay.ico" />
+    <script src="../scripts/Time.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function HighLightSelected(hfIsRowSelected, RowState) {
+            if (hfIsRowSelected.value == 1) hfIsRowSelected.parentElement.parentElement.style.backgroundColor = '#FF9999';
+            else {
+                if (RowState == '0') hfIsRowSelected.parentElement.parentElement.style.backgroundColor = 'white';
+                else hfIsRowSelected.parentElement.parentElement.style.backgroundColor = 'Gainsboro';
+            }
+        } //]]>
+        function SelectDeSelectRow(hfIsRowSelected, RowState) {
+            if (hfIsRowSelected.value == 1)
+                hfIsRowSelected.value = 0
+            else
+                hfIsRowSelected.value = 1
+
+            HighLightSelected(hfIsRowSelected, RowState);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="startTime()">
+    <form id="form1" runat="server">
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-md bg-white navbar-dark fixed-top border-bottom-1-shadowed" style="overflow: hidden">
+            <!-- Brand -->
+            <a class="navbar-brand text-dark" href="Home.aspx">
+                <img src="../Images/logo.png" alt="Logo" class="w-10" />
+                <span class="fa fa-hand-peace-o">Hello! Admin</span>
+            </a>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler float-right bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav text-right float-right">
+                    <li class="nav-item">
+                        <asp:LinkButton runat="server" ID="btnLogout" CssClass="nav-link border-right-2-dark" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                        <%--<a class="nav-link border-right-2-dark" href="#">Logout</a>--%>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-orbiton" id="timeNow"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row mt-150">
+                <div class="col-sm-2 bg-dark">
+                    <div class="container-fluid p-3">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <nav class="nav navbar-light text-left">
+                                    <div class="navbar flex-column display-6">
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkMovies" OnClick="Movies_Click">Movies</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkDramas" OnClick="Dramas_Click">Drama</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkCartoon" OnClick="lnkCartoon_Click">Cartoon</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkGames" OnClick="lnkGames_Click">Games</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkSongs" OnClick="lnkSongs_Click">Songs</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkOnlineGame" OnClick="lnkOnlineGame_Click">Online Games</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkMainSlider" OnClick="lnkMainSlider_Click">Main Slider</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CssClass="p-2 text-light" ID="lnkUpComings" OnClick="lnkUpComings_Click">UpComings</asp:LinkButton>
+                                        <%--<a href="#" class="nav-link">Linnk</a>
+                                    <a href="#" class="nav-link">Linnk</a>--%>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 card">
+                    <div class="bg-whiteboxshadowed mt-2 mb-2">
+                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
